@@ -4,19 +4,6 @@ $(function () {
    
     'use strict';
     
-    // Adjust Header Height
-    
-    var myHeader = $('.header');
-    
-    myHeader.height($(window).height());
-    
-    $(window).resize(function () {
-       
-        myHeader.height($(window).height());
-        
-        // Adjust slider List Item Center
-
-    });
     
     // Links Add Active Class
     
