@@ -3,10 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <title>Classic</title>
-        <!-- Bx SLider Css File -->
-        <link rel="stylesheet" href="css/jquery.bxslider.css" />
-                <!--bootstrap file-->
-                <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!--bootstrap file-->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
         <!-- My Css Files -->
         <link rel="stylesheet" href="css/web.css" />
 
@@ -15,11 +13,26 @@
 
         <!-- wow library -->
         <link rel="stylesheet" href="css/animate.css">
-        <!-- cairo font -->
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet"> -->
     </head>
     <body>
+
+        <!-- start loading -->
+<div class="loading">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+          </div>
+
+        </div>
+
+        <!-- end loading -->
                 
         <div class="header">
             
@@ -80,7 +93,7 @@
                   <div class="carousel-item">            
                     <div class="container">
                     <div class="carousel-caption">
-                        <h2 class="text-start">why ?</h2>
+                        <h2 class="text-start">why.. ?</h2>
                         <p>We believe that every customer has his unique vision <span style="color:var(--maincolor)">So</span> we look forward to create the best experince for each customer to fit his desires</p>
                     </div>
                     </div>
@@ -361,8 +374,6 @@
         <!-- End Footer -->
         
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/jquery.bxslider.min.js"></script>
-        <script src="js/jquery.mixitup.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
         <script>
@@ -373,10 +384,17 @@
 
     $('.project').mouseenter(function () {
         $(this).children('.overlay').show('slow');
-    })
+    });
     $('.project').mouseleave(function () {
         $(this).children('.overlay').hide('slow');
-    })
+    });
+
+    // hide loading spinner
+
+    $(window ).on('load' , function() {
+        $('body').css('overflow', 'auto');
+        $('.loading').fadeOut('slow');
+});
         </script>
         <script src="js/wow.min.js"></script>
         <script>
